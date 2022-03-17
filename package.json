@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "components:storybook": "nx run components:storybook"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,8 @@
     "tslib": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/core": "7.12.13",
+    "@babel/preset-typescript": "7.12.13",
     "@emotion/babel-plugin": "11.7.2",
     "@nrwl/cli": "13.9.2",
     "@nrwl/cypress": "13.9.2",
@@ -29,8 +32,14 @@
     "@nrwl/linter": "13.9.2",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react": "13.9.2",
+    "@nrwl/storybook": "^13.9.2",
     "@nrwl/web": "13.9.2",
     "@nrwl/workspace": "13.9.2",
+    "@storybook/addon-essentials": "~6.4.12",
+    "@storybook/builder-webpack5": "~6.4.12",
+    "@storybook/manager-webpack5": "~6.4.12",
+    "@storybook/react": "~6.4.12",
+    "@svgr/webpack": "^5.4.0",
     "@testing-library/react": "12.1.4",
     "@testing-library/react-hooks": "7.0.2",
     "@types/jest": "27.0.2",
@@ -40,6 +49,7 @@
     "@typescript-eslint/eslint-plugin": "~5.10.0",
     "@typescript-eslint/parser": "~5.10.0",
     "babel-jest": "27.2.3",
+    "babel-loader": "8.1.0",
     "cypress": "^9.1.0",
     "eslint": "~8.7.0",
     "eslint-config-next": "12.1.1-canary.3",
@@ -54,6 +64,7 @@
     "prettier": "^2.5.1",
     "react-test-renderer": "17.0.2",
     "ts-jest": "27.0.5",
-    "typescript": "~4.5.2"
+    "typescript": "~4.5.2",
+    "url-loader": "^3.0.0"
   }
 }
