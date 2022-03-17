@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-react-code-sharing/apis": ["libs/apis/src/index.ts"],
       "@nx-react-code-sharing/components": ["libs/components/src/index.ts"],
       "@nx-react-code-sharing/configs": ["libs/configs/src/index.ts"],
       "@nx-react-code-sharing/styles": ["libs/styles/src/index.ts"],

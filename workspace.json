@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "apis": "libs/apis",
     "apps-nextjs-app": "apps/apps/nextjs-app",
     "apps-nextjs-app-e2e": "apps/apps/nextjs-app-e2e",
     "components": "libs/components",
