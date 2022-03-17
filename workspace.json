@@ -3,6 +3,8 @@
   "projects": {
     "apps-nextjs-app": "apps/apps/nextjs-app",
     "apps-nextjs-app-e2e": "apps/apps/nextjs-app-e2e",
+    "rn-app": "apps/rn-app",
+    "rn-app-e2e": "apps/rn-app-e2e",
     "shared-apis": "libs/shared/apis",
     "shared-components": "libs/shared/components",
     "shared-configs": "libs/shared/configs",
