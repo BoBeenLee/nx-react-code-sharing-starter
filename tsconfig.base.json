@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-react-code-sharing/components": ["libs/components/src/index.ts"]
+      "@nx-react-code-sharing/components": ["libs/components/src/index.ts"],
+      "@nx-react-code-sharing/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
