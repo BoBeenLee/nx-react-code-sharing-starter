@@ -6,7 +6,9 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "shared-components:storybook": "nx run shared-components:storybook"
+    "shared-components:storybook": "nx run shared-components:storybook",
+    "rn-app:start": "nx run rn-app:start",
+    "rn-app:run-ios": "nx run rn-app:run-ios"
   },
   "private": true,
   "dependencies": {
