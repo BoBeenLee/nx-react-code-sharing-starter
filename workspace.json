@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "components": "libs/components",
     "nx-react-code-sharing": "apps/nx-react-code-sharing",
     "nx-react-code-sharing-e2e": "apps/nx-react-code-sharing-e2e"
   }
