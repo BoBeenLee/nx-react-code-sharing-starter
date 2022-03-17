@@ -1,8 +1,8 @@
 {
   "version": 2,
   "projects": {
-    "apps-nextjs-app": "apps/apps/nextjs-app",
-    "apps-nextjs-app-e2e": "apps/apps/nextjs-app-e2e",
+    "nextjs-app": "apps/nextjs-app",
+    "nextjs-app-e2e": "apps/nextjs-app-e2e",
     "rn-app": "apps/rn-app",
     "rn-app-e2e": "apps/rn-app-e2e",
     "shared-apis": "libs/shared/apis",

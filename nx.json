@@ -43,5 +43,5 @@
       }
     }
   },
-  "defaultProject": "apps-nextjs-app"
+  "defaultProject": "nextjs-app"
 }
