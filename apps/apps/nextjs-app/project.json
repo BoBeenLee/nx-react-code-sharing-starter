@@ -1,6 +1,6 @@
 {
-  "root": "apps/nx-react-code-sharing",
-  "sourceRoot": "apps/nx-react-code-sharing",
+  "root": "apps/apps/nextjs-app",
+  "sourceRoot": "apps/apps/nextjs-app",
   "projectType": "application",
   "targets": {
     "build": {
@@ -8,8 +8,8 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/nx-react-code-sharing",
-        "outputPath": "dist/apps/nx-react-code-sharing"
+        "root": "apps/apps/nextjs-app",
+        "outputPath": "dist/apps/apps/nextjs-app"
       },
       "configurations": {
         "production": {}
@@ -18,12 +18,12 @@
     "serve": {
       "executor": "@nrwl/next:server",
       "options": {
-        "buildTarget": "nx-react-code-sharing:build",
+        "buildTarget": "apps-nextjs-app:build",
         "dev": true
       },
       "configurations": {
         "production": {
-          "buildTarget": "nx-react-code-sharing:build:production",
+          "buildTarget": "apps-nextjs-app:build:production",
           "dev": false
         }
       }
@@ -31,14 +31,14 @@
     "export": {
       "executor": "@nrwl/next:export",
       "options": {
-        "buildTarget": "nx-react-code-sharing:build:production"
+        "buildTarget": "apps-nextjs-app:build:production"
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/nx-react-code-sharing"],
+      "outputs": ["coverage/apps/apps/nextjs-app"],
       "options": {
-        "jestConfig": "apps/nx-react-code-sharing/jest.config.js",
+        "jestConfig": "apps/apps/nextjs-app/jest.config.js",
         "passWithNoTests": true
       }
     },
@@ -46,7 +46,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/nx-react-code-sharing/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/apps/nextjs-app/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
