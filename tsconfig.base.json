@@ -25,7 +25,8 @@
       "@nx-react-code-sharing/shared-styles": [
         "libs/shared/styles/src/index.ts"
       ],
-      "@nx-react-code-sharing/shared-utils": ["libs/shared/utils/src/index.ts"]
+      "@nx-react-code-sharing/shared-utils": ["libs/shared/utils/src/index.ts"],
+      "@nx-react-code-sharing/shared/hooks": ["libs/shared/hooks/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
