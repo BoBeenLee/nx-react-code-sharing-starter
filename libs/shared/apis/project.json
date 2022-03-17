@@ -1,0 +1,32 @@
+{
+  "root": "libs/shared/apis",
+  "sourceRoot": "libs/shared/apis/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/apis",
+        "main": "libs/shared/apis/src/index.ts",
+        "tsConfig": "libs/shared/apis/tsconfig.lib.json",
+        "assets": ["libs/shared/apis/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/apis/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/apis"],
+      "options": {
+        "jestConfig": "libs/shared/apis/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

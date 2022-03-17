@@ -1,12 +1,12 @@
 {
   "version": 2,
   "projects": {
-    "apis": "libs/apis",
     "apps-nextjs-app": "apps/apps/nextjs-app",
     "apps-nextjs-app-e2e": "apps/apps/nextjs-app-e2e",
-    "components": "libs/components",
-    "configs": "libs/configs",
-    "styles": "libs/styles",
-    "utils": "libs/utils"
+    "shared-apis": "libs/shared/apis",
+    "shared-components": "libs/shared/components",
+    "shared-configs": "libs/shared/configs",
+    "shared-styles": "libs/shared/styles",
+    "shared-utils": "libs/shared/utils"
   }
 }

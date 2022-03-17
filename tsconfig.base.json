@@ -15,11 +15,17 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-react-code-sharing/apis": ["libs/apis/src/index.ts"],
-      "@nx-react-code-sharing/components": ["libs/components/src/index.ts"],
-      "@nx-react-code-sharing/configs": ["libs/configs/src/index.ts"],
-      "@nx-react-code-sharing/styles": ["libs/styles/src/index.ts"],
-      "@nx-react-code-sharing/utils": ["libs/utils/src/index.ts"]
+      "@nx-react-code-sharing/shared-apis": ["libs/shared/apis/src/index.ts"],
+      "@nx-react-code-sharing/shared-components": [
+        "libs/shared/components/src/index.ts"
+      ],
+      "@nx-react-code-sharing/shared-configs": [
+        "libs/shared/configs/src/index.ts"
+      ],
+      "@nx-react-code-sharing/shared-styles": [
+        "libs/shared/styles/src/index.ts"
+      ],
+      "@nx-react-code-sharing/shared-utils": ["libs/shared/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
