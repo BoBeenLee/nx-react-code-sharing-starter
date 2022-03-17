@@ -1,4 +1,5 @@
-import styled from '@emotion/styled';
+import React from "react";
+import styled from '@emotion/primitives';
 import colors from 'libs/shared/styles/src/lib/colors';
 
 type FontType = 'BOLD' | 'MEDIUM' | 'REGULAR';
@@ -15,8 +16,8 @@ const fontTypeToFont: { [key in FontType]: string } = {
   REGULAR: 'NotoSansKR-Regular',
 };
 
-const StyledText = styled.div<{ fontType: FontType }>`
-  font-family: ${({ fontType }) => fontTypeToFont[fontType]};
+const StyledText = styled.Text<{ fontType: FontType }>`
+  /* font-family: ${({ fontType }) => fontTypeToFont[fontType]}; TODO 폰트 설정 */
   letter-spacing: -0.5px;
   color: ${colors.gray900};
 `;

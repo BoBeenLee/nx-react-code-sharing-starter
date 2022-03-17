@@ -1,25 +1,15 @@
-declare module "*.json";
-declare module "moment/min/moment-with-locales";
+declare module '*.json';
+declare module 'moment/min/moment-with-locales';
+declare module '@emotion/primitives';
 
 type Subtract<T, V> = Pick<T, Exclude<keyof T, keyof V>>;
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-type RetrieveAsyncFunc<T extends (...args: any[]) => any> = ReturnType<
-  T
-> extends Promise<infer U>
-  ? U
-  : never;
+type RetrieveAsyncFunc<T extends (...args: any[]) => any> =
+  ReturnType<T> extends Promise<infer U> ? U : never;
 type RemoveKeys<T, K extends Array<keyof T>> = Pick<
   T,
   Exclude<keyof T, K[keyof K]>
 >;
 type RequireProperty<T, P extends keyof T> = T & { [K in P]-?: T[P] };
-type NoUndefinedField<T> = { [P in keyof T]-?: NoUndefinedField<NonNullable<T[P]>> };
-
-declare module "*.svg" {
-  const content: any;
-  export default content;
-}
-
-declare module 'console' {
-  export = typeof import("console");
-}
+type NoUndefinedField<T> = {
+  [P in keyof T]-?: NoUndefinedField<NonNullable<T[P]>>;
+};
