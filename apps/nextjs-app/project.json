@@ -48,6 +48,13 @@
       "options": {
         "lintFilePatterns": ["apps/nextjs-app/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "commitMessageFormat": "chore(${projectName}): release version ${version}"
+      }
     }
   },
   "tags": []

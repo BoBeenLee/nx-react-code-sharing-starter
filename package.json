@@ -9,7 +9,8 @@
     "nextjs-app:start": "nx run nextjs-app:serve",
     "shared-components:storybook": "nx run shared-components:storybook",
     "rn-app:start": "nx run rn-app:start",
-    "rn-app:run-ios": "nx run rn-app:run-ios"
+    "rn-app:run-ios": "nx run rn-app:run-ios",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -36,7 +37,10 @@
   "devDependencies": {
     "@babel/core": "7.12.13",
     "@babel/preset-typescript": "7.12.13",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@emotion/babel-plugin": "11.7.2",
+    "@jscutlery/semver": "^2.21.0",
     "@nrwl/cli": "13.9.2",
     "@nrwl/cypress": "13.9.2",
     "@nrwl/detox": "13.9.2",
@@ -83,6 +87,7 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.29.3",
     "eslint-plugin-react-hooks": "4.3.0",
+    "husky": "^7.0.4",
     "jest": "27.2.3",
     "jest-circus": "27.2.3",
     "jest-react-native": "18.0.0",
