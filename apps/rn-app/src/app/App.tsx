@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -13,9 +13,14 @@ import {
 // @ts-ignore
 import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrowser';
 
-import { Bold8 } from '@nx-react-code-sharing/shared-components';
+import { Bold12, Bold8 } from '@nx-react-code-sharing/shared-components';
+import {
+  todosByOrderDESCSelector,
+  useTodoStore,
+} from '@nx-react-code-sharing/shared/stores';
 
 export const App = () => {
+  const todos = useTodoStore(todosByOrderDESCSelector);
   const scrollViewRef = useRef<null | ScrollView>(null);
 
   return (
@@ -31,7 +36,12 @@ export const App = () => {
         >
           <View style={styles.section}>
             <Text style={styles.textLg}>Hello there,</Text>
-            <Bold8 testID="heading">Welcome RnApp 👋</Bold8>
+            <Bold8 testID="heading">Welcome RnApp 👋 Todo List</Bold8>
+          </View>
+          <View style={styles.todos}>
+            {todos.map((todo) => (
+              <Bold12 key={todo.id}>{todo.name}</Bold12>
+            ))}
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -48,6 +58,9 @@ const styles = StyleSheet.create({
   section: {
     marginVertical: 24,
     marginHorizontal: 12,
+  },
+  todos: {
+    flexDirection: 'column',
   },
 });
 

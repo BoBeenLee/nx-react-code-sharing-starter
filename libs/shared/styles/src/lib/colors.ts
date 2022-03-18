@@ -1,5 +1,5 @@
 // tslint:disable:object-literal-sort-keys
-const colors = {
+export const colors = {
   black50: '#80000000',
   black70: 'rgba(33,33,33,.7)',
   white: '#ffffff',
@@ -43,4 +43,3 @@ const colors = {
   sunflower: '#ffc310',
 };
 
-export default colors;

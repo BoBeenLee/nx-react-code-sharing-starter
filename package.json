@@ -24,6 +24,7 @@
     "hoist-non-react-statics": "^3.3.2",
     "immer": "^9.0.12",
     "next": "12.1.0",
+    "qs": "^6.10.3",
     "react": "17.0.2",
     "react-dom": "^17.0.2",
     "react-native": "0.67.3",

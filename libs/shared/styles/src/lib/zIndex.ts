@@ -1,5 +1,5 @@
 /*tslint:disable*/
-const zIndex = Object.freeze({
+export const zIndex = Object.freeze({
   lowest: 0,
   veryLow: 1,
   low: 3,
@@ -8,5 +8,3 @@ const zIndex = Object.freeze({
   veryHigh: 9,
   highest: 100,
 });
-
-export default zIndex;

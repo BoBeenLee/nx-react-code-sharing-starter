@@ -111,7 +111,7 @@ export const enhanceNoError =
 export function delay(seconds = 500) {
   return new Promise((resolve, __) => {
     setTimeout(() => {
-      resolve();
+      resolve(undefined);
     }, seconds);
   });
 }

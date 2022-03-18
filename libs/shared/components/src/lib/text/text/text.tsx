@@ -1,6 +1,7 @@
 import React from "react";
 import styled from '@emotion/primitives';
-import colors from 'libs/shared/styles/src/lib/colors';
+
+import { colors } from '@nx-react-code-sharing/shared-styles';
 
 type FontType = 'BOLD' | 'MEDIUM' | 'REGULAR';
 
@@ -17,7 +18,6 @@ const fontTypeToFont: { [key in FontType]: string } = {
 };
 
 const StyledText = styled.Text<{ fontType: FontType }>`
-  /* font-family: ${({ fontType }) => fontTypeToFont[fontType]}; TODO 폰트 설정 */
   letter-spacing: -0.5px;
   color: ${colors.gray900};
 `;
