@@ -48,6 +48,19 @@
       "options": {
         "lintFilePatterns": ["apps/nextjs-app/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "changelog": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "cd apps/nextjs-app && auto-changelog -p"
+          },
+          {
+            "command": "cd apps/nextjs-app && release-it --ci"
+          }
+        ]
+      }
     }
   },
   "tags": []

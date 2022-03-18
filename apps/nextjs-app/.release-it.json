@@ -1,0 +1,22 @@
+{
+  "git": {
+    "commit": true,
+    "commitMessage": "chore(Release): v${version}",
+    "requireUpstream": false,
+    "requireCleanWorkingDir": true,
+    "tag": true,
+    "tagName": "v%s-nextjs-app",
+    "push": false
+  },
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "release": false,
+    "releaseName": "nextjs-app %s Released!",
+    "draft": true
+  },
+  "hooks": {
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.\n"
+  }
+}
