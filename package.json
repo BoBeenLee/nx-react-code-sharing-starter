@@ -28,7 +28,8 @@
     "react-native": "0.67.3",
     "react-native-web": "^0.17.7",
     "regenerator-runtime": "0.13.7",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "zustand": "^3.7.1"
   },
   "devDependencies": {
     "@babel/core": "7.12.13",

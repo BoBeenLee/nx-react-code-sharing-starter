@@ -9,6 +9,7 @@
     "shared-components": "libs/shared/components",
     "shared-configs": "libs/shared/configs",
     "shared-hooks": "libs/shared/hooks",
+    "shared-stores": "libs/shared/stores",
     "shared-styles": "libs/shared/styles",
     "shared-utils": "libs/shared/utils"
   }
