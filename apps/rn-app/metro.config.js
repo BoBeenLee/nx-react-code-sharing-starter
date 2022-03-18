@@ -6,6 +6,7 @@ module.exports = (async () => {
   const {
     resolver: { sourceExts, assetExts },
   } = await getDefaultConfig();
+  
   return withNxMetro(
     {
       transformer: {
@@ -21,7 +22,7 @@ module.exports = (async () => {
         assetExts: assetExts.filter((ext) => ext !== 'svg'),
         sourceExts: [...sourceExts, 'svg'],
         resolverMainFields: ['sbmodern', 'browser', 'main'],
-        blacklistRE: exclusionList([/\.\/dist\/.*/]),
+        blacklistRE: exclusionList([/\.\/dist\/.*/, /libs\/.*package.json/]),
       },
     },
     {
