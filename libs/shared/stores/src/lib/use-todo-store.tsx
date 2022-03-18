@@ -18,11 +18,17 @@ interface TodoStoreProps {
 const PREFIX_TODO_ID = 'todo';
 
 export const useTodoStore = create<TodoStoreProps>((set, get) => ({
-  todos: [],
+  todos: [
+    {
+      id: uniqueId('todo'),
+      name: 'test',
+      order: 1,
+    },
+  ],
   initialize: () => {},
   reset: () => {},
   addTodo: (name: string) => {
-    const id = uniqueId('toast');
+    const id = uniqueId('todo');
     set(
       produce<TodoStoreProps>((state) => {
         state.todos.push({

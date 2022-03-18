@@ -1,12 +1,9 @@
-import { Platform } from 'react-native';
-import { css, CSSObject, SimpleInterpolation } from 'styled-components';
-
-export const isWeb = () => Platform.OS === 'web';
+import { css, CSSObject } from '@emotion/react';
 
 const media = {
   desktop:
     (width?: number) =>
-    (first: TemplateStringsArray | CSSObject, ...args: SimpleInterpolation[]) =>
+    (first: CSSObject, ...args: any[]) =>
       width === undefined
         ? css`
             @media (min-width: 769px) {
@@ -20,7 +17,7 @@ const media = {
         : css``,
   tablet:
     (width?: number) =>
-    (first: TemplateStringsArray | CSSObject, ...args: SimpleInterpolation[]) =>
+    (first: CSSObject, ...args: any[]) =>
       width === undefined
         ? css`
             @media (max-width: 768px) and (min-width: 361px) {
@@ -34,7 +31,7 @@ const media = {
         : css``,
   mobile:
     (width?: number) =>
-    (first: TemplateStringsArray | CSSObject, ...args: SimpleInterpolation[]) =>
+    (first: CSSObject, ...args: any[]) =>
       width === undefined
         ? css`
             @media (max-width: 360px) {
@@ -48,7 +45,7 @@ const media = {
         : css``,
   tabletAndDesktop:
     (width?: number) =>
-    (first: TemplateStringsArray | CSSObject, ...args: SimpleInterpolation[]) =>
+    (first: CSSObject, ...args: any[]) =>
       width === undefined
         ? css`
             @media (min-width: 361px) {
