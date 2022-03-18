@@ -7,11 +7,11 @@
     "build": "nx build",
     "test": "nx test",
     "nextjs-app:start": "nx run nextjs-app:serve",
-    "nextjs-app:changelog": "nx run nextjs-app:changelog",
-    "nextjs-app:releaseit": "nx run nextjs-app:releaseit",
+    "nextjs-app:release": "nx run nextjs-app:release",
     "shared-components:storybook": "nx run shared-components:storybook",
     "rn-app:start": "nx run rn-app:start",
-    "rn-app:run-ios": "nx run rn-app:run-ios"
+    "rn-app:run-ios": "nx run rn-app:run-ios",
+    "rn-app:release": "nx run rn-app:release"
   },
   "private": true,
   "dependencies": {

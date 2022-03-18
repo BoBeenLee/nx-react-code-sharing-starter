@@ -49,7 +49,7 @@
         "lintFilePatterns": ["apps/nextjs-app/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "changelog": {
+    "release": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "commands": [

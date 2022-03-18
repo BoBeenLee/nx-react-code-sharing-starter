@@ -71,7 +71,7 @@
         "passWithNoTests": true
       }
     },
-    "changelog": {
+    "release": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "commands": [
