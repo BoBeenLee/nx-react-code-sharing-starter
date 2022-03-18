@@ -70,13 +70,6 @@
         "jestConfig": "apps/rn-app/jest.config.js",
         "passWithNoTests": true
       }
-    },
-    "version": {
-      "executor": "@jscutlery/semver:version",
-      "options": {
-        "preset": "conventional",
-        "commitMessageFormat": "chore(${projectName}): release version ${version}"
-      }
     }
   },
   "tags": []
