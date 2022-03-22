@@ -70,6 +70,19 @@
         "jestConfig": "apps/rn-app/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "release": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "cd apps/nextjs-app && auto-changelog -p"
+          },
+          {
+            "command": "cd apps/nextjs-app && release-it --ci"
+          }
+        ]
+      }
     }
   },
   "tags": []
