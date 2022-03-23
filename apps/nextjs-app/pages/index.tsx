@@ -4,6 +4,7 @@ import {
   todosByOrderDESCSelector,
   useTodoStore,
 } from '@nx-react-code-sharing/shared/stores';
+import { env } from '../libs/env';
 
 const StyledPage = styled.div`
   .page {
@@ -24,7 +25,7 @@ export function Index() {
           <div id="welcome">
             <Bold20>
               <span> Hello there, </span>
-              Welcome nx-react-code-sharing 👋 Todo List
+              Welcome nx-react-code-sharing 👋 Todo List (API_URL={env.API_URL})
             </Bold20>
             <ul>
               {todos.map((todo) => (

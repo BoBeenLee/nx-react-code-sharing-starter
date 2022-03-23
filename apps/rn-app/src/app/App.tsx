@@ -18,6 +18,7 @@ import {
   todosByOrderDESCSelector,
   useTodoStore,
 } from '@nx-react-code-sharing/shared/stores';
+import { env } from '../libs/env';
 
 export const App = () => {
   const todos = useTodoStore(todosByOrderDESCSelector);
@@ -36,7 +37,9 @@ export const App = () => {
         >
           <View style={styles.section}>
             <Text style={styles.textLg}>Hello there,</Text>
-            <Bold8 testID="heading">Welcome RnApp 👋 Todo List</Bold8>
+            <Bold8 testID="heading">
+              Welcome RnApp 👋 Todo List (API_URL={env.API_URL})
+            </Bold8>
           </View>
           <View style={styles.todos}>
             {todos.map((todo) => (

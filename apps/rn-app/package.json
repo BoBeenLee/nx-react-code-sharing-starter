@@ -16,6 +16,7 @@
     "@emotion/styled": "*",
     "qs": "*",
     "immer": "*",
-    "zustand": "*"
+    "zustand": "*",
+    "@emotion/react": "*"
   }
 }
