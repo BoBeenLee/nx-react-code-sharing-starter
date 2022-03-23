@@ -76,10 +76,10 @@
       "options": {
         "commands": [
           {
-            "command": "cd apps/nextjs-app && auto-changelog -p"
+            "command": "cd apps/rn-app && auto-changelog -p"
           },
           {
-            "command": "cd apps/nextjs-app && release-it --ci"
+            "command": "cd apps/rn-app && release-it --ci"
           }
         ]
       }
