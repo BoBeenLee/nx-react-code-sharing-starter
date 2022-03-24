@@ -13,7 +13,9 @@
     "rn-app:start": "nx run rn-app:start",
     "rn-app:run-ios": "cp ./apps/rn-app/.dev.env ./apps/rn-app/.env && nx run rn-app:run-ios",
     "rn-app:run-ios:qa": "cp ./apps/rn-app/.qa.env ./apps/rn-app/.env && nx run rn-app:run-ios",
-    "rn-app:release": "nx run rn-app:release"
+    "rn-app:release": "nx run rn-app:release",
+    "sdk:build": "nx run sdk:build",
+    "sdk:publish": "nx run sdk:publish"
   },
   "private": true,
   "dependencies": {

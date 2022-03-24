@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "typeRoots": ["./typings", "./node_modules/@types"],
     "paths": {
+      "@nx-react-code-sharing/sdk": ["libs/sdk/src/index.ts"],
       "@nx-react-code-sharing/shared-apis": ["libs/shared/apis/src/index.ts"],
       "@nx-react-code-sharing/shared-components": [
         "libs/shared/components/src/index.ts"
