@@ -1,0 +1,66 @@
+name: ci-cd
+
+on:
+  push:
+    branches:
+      - master
+    workflow_dispatch:
+      inputs:
+        tags:
+          description: "tag name to publish"
+
+env:
+  NX_CLOUD_DISTRIBUTED_EXECUTION: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+      - run: npm install
+      - run: npx nx-cloud start-ci-run    
+      - run: npm run test:affected
+      - run: npx nx-cloud stop-all-agents
+  storybook-deployment:
+    if: ${{ github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Storybook Build
+        run: |
+          npm install
+          npx nx-cloud start-ci-run
+          npm run shared-components:build-storybook
+          npx nx-cloud stop-all-agents
+      - name: Storybook Deployment
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./dist/storybook/
+  agents:
+    runs-on: ubuntu-latest
+    name: Agent 1
+    timeout-minutes: 60
+    strategy:
+      matrix:
+        agent: [ 1, 2, 3 ]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with: 
+          node-version: '16'
+      - run: npm install
+      - name: Start Nx Agent ${{ matrix.agent }}
+        run: npx nx-cloud start-agent
