@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import styled from '@emotion/primitives';
 
 import { colors } from '@nx-react-code-sharing/shared-styles';

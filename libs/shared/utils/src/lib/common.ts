@@ -1,3 +1,5 @@
+import type * as React from 'react';
+
 export const sortedObject = <T extends object>(obj: T) => {
   const keys = Object.keys(obj).sort() as Array<keyof T>;
   return keys.reduce((res, key) => {

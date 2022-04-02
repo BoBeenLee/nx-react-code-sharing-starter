@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import styled from '@emotion/primitives';
 
 import RNText, { TextProps } from '../text/text';
