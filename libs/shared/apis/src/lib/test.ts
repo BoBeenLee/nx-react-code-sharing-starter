@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export const test = async () => {
-  const response = await axios.get(`/api/test`);
-  console.log(response.data);
+export const test = async <T>(params: { url: string }) => {
+  const { url } = params;
+  const response = await axios.get<T>(url);
+  return response.data;
 };

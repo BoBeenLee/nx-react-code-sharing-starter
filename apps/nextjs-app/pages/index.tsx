@@ -1,9 +1,11 @@
 import styled from '@emotion/styled';
+import { test } from '@nx-react-code-sharing/shared-apis';
 import { Bold20 } from '@nx-react-code-sharing/shared-components';
 import {
   todosByOrderDESCSelector,
   useTodoStore,
 } from '@nx-react-code-sharing/shared/stores';
+import { useEffect } from 'react';
 import { env } from '../libs/env';
 
 const StyledPage = styled.div`
@@ -18,6 +20,19 @@ export function Index() {
    *
    * Note: The corresponding styles are in the ./index.@emotion/styled file.
    */
+
+  useEffect(() => {
+    const fetchTest = async () => {
+      const testData = await test<{
+        status: string;
+      }>({
+        url: '/api/healthz',
+      });
+      console.log(testData);
+    };
+    fetchTest();
+  }, []);
+
   return (
     <StyledPage>
       <div className="wrapper">
