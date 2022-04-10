@@ -5,6 +5,7 @@
     "types": ["node"]
   },
   "files": [
+    "../../../types/global.d.ts",
     "../../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
     "../../../node_modules/@nrwl/react/typings/image.d.ts"
   ],
