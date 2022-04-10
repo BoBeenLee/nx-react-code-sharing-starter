@@ -5,6 +5,7 @@
     "declaration": true,
     "types": []
   },
+  "files": ["../../../types/global.d.ts"],
   "include": ["**/*.ts"],
   "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }
