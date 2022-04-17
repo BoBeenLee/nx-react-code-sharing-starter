@@ -1,59 +1,65 @@
-
-
 # NxReactCodeSharing
 
-This project was generated using [Nx](https://nx.dev).
+## 📂 Directory structure
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+    root
+    ├── apps
+    ├──── nextjs-app       # web
+    ├──── rn-app           # app
+    ├── libs
+    ├──── sdk              # sdk for test
+    ├──── shared
+    ├─────── interfaces    # 도메인에 따른 인터페이스
+    ├─────── libs          # 공통 라이브러리 ex) 로그, 스토리지...
+    ├─────── ui-components # 공통 UI 컴포넌트
+    ├─────── stores        # 공통 상태관리스토어
+    ├─────── styles        # 공통 스타일
+    ├─────── utils         # 공통 유틸
+    └── README.md
 
-🔎 **Smart, Fast and Extensible Build System**
+## Convention
 
-## Adding capabilities to your workspace
+- 파일 이름 네이밍
+  - 하이픈 형식 ex) z-index.ts, login-modal.tsx ...
+- 컴포넌트명 네이밍
+  - ex) const LoginModal = () => { ... }
+- 패키지, 폴더명 단수or복수 네이밍
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+  - 여러파일이 들어갈거같다면 복수명으로
+    ex) shared/styles, shared/libs ...
+  - 고유 기능을 의미한다면 단수
+    ex) app/email, app/login ...
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+## Global Types Definition Setup
 
-Below are our core plugins:
+- tsconfig.lib.json, tsconfig.app.json files 코드를 아래와 같이 추가합니다.
+  - ex) libs/shared/interfaces/tsconfig.libs.json
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+```
+"files": [
+    "../../../types/global.d.ts", <-- depth에 따라 경로 위치는 다를 수 있음
+],
+```
 
-There are also many [community plugins](https://nx.dev/community) you could add.
+### 참고 문서
 
-## Generate an application
-
-Run `nx g @nrwl/react:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@nx-react-code-sharing/mylib`.
+- https://stackoverflow.com/questions/68986789/nx-react-next-js-shared-type-declaration-file
 
 ## Development server
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+### Development Deployment
 
-## Code scaffolding
+```
+heroku container:login
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+npm run nextjs-app:deploy:production
+
+docker tag DOCKER_IMAGE_ID registry.heroku.com/nextjs-app-dev-app/web
+
+docker push registry.heroku.com/nextjs-app-dev-app/web
+
+heroku container:release web --app=nextjs-app-dev-app
+```
 
 ## Build
 
@@ -78,8 +84,6 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
 
 ## ☁ Nx Cloud
 
