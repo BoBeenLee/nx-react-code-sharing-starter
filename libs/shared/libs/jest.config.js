@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'shared-configs',
+  displayName: 'shared-libs',
   preset: '../../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -10,5 +10,5 @@ module.exports = {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../coverage/libs/shared/configs',
+  coverageDirectory: '../../../coverage/libs/shared/libs',
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/primitives';
 
-
 /* eslint-disable-next-line */
 export interface XEIconProps {}
 
