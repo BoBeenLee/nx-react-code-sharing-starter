@@ -43,7 +43,7 @@ jobs:
         run: |
           npm install
           npx nx-cloud start-ci-run
-          npm run shared-components:build-storybook
+          npm run build-storybook
           npx nx-cloud stop-all-agents
       - name: Storybook Deployment
         uses: peaceiris/actions-gh-pages@v3
