@@ -1,2 +1,2 @@
 export * from './lib/colors';
-export * from './lib/zIndex';
+export * from './lib/z-index';

@@ -1,6 +1,3 @@
-type TestType = NoUndefinedField<{ a?: string }>;
-
-/*tslint:disable*/
 export const zIndex = Object.freeze({
   lowest: 0,
   veryLow: 1,
