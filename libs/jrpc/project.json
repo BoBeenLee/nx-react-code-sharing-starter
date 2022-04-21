@@ -1,0 +1,23 @@
+{
+  "root": "libs/jrpc",
+  "sourceRoot": "libs/jrpc/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/jrpc/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/jrpc"],
+      "options": {
+        "jestConfig": "libs/jrpc/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
