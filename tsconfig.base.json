@@ -10,26 +10,45 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-react-code-sharing/sdk": ["libs/sdk/src/index.ts"],
-      "@nx-react-code-sharing/shared-apis": ["libs/shared/apis/src/index.ts"],
-      "@nx-react-code-sharing/shared-libs": ["libs/shared/libs/src/index.ts"],
+      "@nx-react-code-sharing/sdk": [
+        "libs/sdk/src/index.ts"
+      ],
+      "@nx-react-code-sharing/shared-apis": [
+        "libs/shared/apis/src/index.ts"
+      ],
+      "@nx-react-code-sharing/shared-libs": [
+        "libs/shared/libs/src/index.ts"
+      ],
       "@nx-react-code-sharing/shared-styles": [
         "libs/shared/styles/src/index.ts"
       ],
       "@nx-react-code-sharing/shared-ui-components": [
         "libs/shared/ui-components/src/index.ts"
       ],
-      "@nx-react-code-sharing/shared-utils": ["libs/shared/utils/src/index.ts"],
-      "@nx-react-code-sharing/shared/hooks": ["libs/shared/hooks/src/index.ts"],
+      "@nx-react-code-sharing/shared-utils": [
+        "libs/shared/utils/src/index.ts"
+      ],
+      "@nx-react-code-sharing/shared/hooks": [
+        "libs/shared/hooks/src/index.ts"
+      ],
       "@nx-react-code-sharing/shared/stores": [
         "libs/shared/stores/src/index.ts"
       ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "files": [
+    "./types/global.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/next:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/nextjs-app",
@@ -28,6 +30,19 @@
         }
       }
     },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "nx run nextjs-app:build:production",
+          "docker build -f ./apps/nextjs-app/Dockerfile . -t nx-code-sharing-nextjs-app"
+        ],
+        "parallel": false
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
     "export": {
       "executor": "@nrwl/next:export",
       "options": {
@@ -36,7 +51,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/nextjs-app"],
+      "outputs": [
+        "coverage/apps/nextjs-app"
+      ],
       "options": {
         "jestConfig": "apps/nextjs-app/jest.config.js",
         "passWithNoTests": true
@@ -44,9 +61,13 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/nextjs-app/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "apps/nextjs-app/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     },
     "release": {
