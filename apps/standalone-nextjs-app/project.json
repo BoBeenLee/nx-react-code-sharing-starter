@@ -1,0 +1,101 @@
+{
+  "root": "apps/standalone-nextjs-app",
+  "sourceRoot": "apps/standalone-nextjs-app",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/standalone-nextjs-app",
+        "outputPath": "dist/apps/standalone-nextjs-app"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "build-production": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "nx run standalone-nextjs-app:build:production",
+          "cp -rf ./apps/standalone-nextjs-app/generated/* ./dist/apps/standalone-nextjs-app/generated",
+          "tsc --project ./apps/standalone-nextjs-app/tsconfig.server.json"
+        ],
+        "parallel": false
+      }
+    },
+    "serve-local": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "standalone-nextjs-app:build",
+        "dev": true,
+        "customServerPath": "server.ts",
+        "port": 3000
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "standalone-nextjs-app:build:production",
+          "dev": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "nx run standalone-nextjs-app:build-production",
+          "NODE_ENV=production node dist/apps/standalone-nextjs-app/main.js"
+        ],
+        "parallel": false
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "nx run standalone-nextjs-app:build-production",
+          "docker build -f ./apps/standalone-nextjs-app/Dockerfile . -t nx-code-sharing-standalone-nextjs-app"
+        ],
+        "parallel": false
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "standalone-nextjs-app:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/standalone-nextjs-app"
+      ],
+      "options": {
+        "jestConfig": "apps/standalone-nextjs-app/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/standalone-nextjs-app/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
