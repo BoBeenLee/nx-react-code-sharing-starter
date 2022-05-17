@@ -1,4 +1,4 @@
-import { act, renderHook } from '@testing-library/react-hooks';
+import { act, renderHook } from '@testing-library/react';
 import useTimer from './use-timer';
 
 describe('useTimer', () => {
@@ -6,6 +6,7 @@ describe('useTimer', () => {
     const { result } = renderHook(() =>
       useTimer({
         seconds: 1,
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
         onTimeEnd: () => {},
       })
     );
