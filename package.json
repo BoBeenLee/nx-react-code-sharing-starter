@@ -50,9 +50,9 @@
     "zustand": "^3.7.1"
   },
   "devDependencies": {
-    "@babel/core": "7.17.12",
-    "@babel/preset-typescript": "7.16.7",
-    "@babel/runtime": "7.17.9",
+    "@babel/core": "7.18.0",
+    "@babel/preset-typescript": "7.17.12",
+    "@babel/runtime": "7.18.0",
     "@emotion/babel-plugin": "11.9.2",
     "@nrwl/cli": "14.1.7",
     "@nrwl/cypress": "14.1.7",
@@ -84,7 +84,7 @@
     "@testing-library/jest-native": "4.0.4",
     "@testing-library/react": "13.1.1",
     "@testing-library/react-native": "9.1.0",
-    "@types/jest": "27.4.1",
+    "@types/jest": "27.5.1",
     "@types/node": "16.11.7",
     "@types/react": "18.0.8",
     "@types/react-dom": "18.0.3",
@@ -92,8 +92,8 @@
     "@typescript-eslint/eslint-plugin": "5.18.0",
     "@typescript-eslint/parser": "5.18.0",
     "auto-changelog": "^2.4.0",
-    "babel-jest": "27.5.1",
-    "babel-loader": "8.1.0",
+    "babel-jest": "28.1.0",
+    "babel-loader": "8.2.5",
     "babel-plugin-react-native-web": "^0.17.7",
     "cypress": "^9.1.0",
     "detox": "19.6.5",
@@ -106,8 +106,9 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.5.0",
-    "jest": "27.5.1",
-    "jest-circus": "27.2.3",
+    "jest": "28.1.0",
+    "jest-circus": "28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
     "jest-react-native": "18.0.0",
     "metro": "0.70.1",
     "metro-babel-register": "0.70.1",
@@ -120,7 +121,7 @@
     "react-native-svg-transformer": "1.0.0",
     "react-test-renderer": "18.1.0",
     "release-it": "^14.12.5",
-    "ts-jest": "27.1.4",
+    "ts-jest": "28.0.2",
     "typescript": "4.6.3",
     "url-loader": "^3.0.0"
   },
@@ -134,4 +135,3 @@
     "@types/react-dom": "17.0.2"
   }
 }
-
