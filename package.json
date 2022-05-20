@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
+    "build:affected:all": "nx affected --target=build --all",
     "test": "nx test",
     "test:affected": "nx affected --target=test --base= origin/master~1 --head= origin/master",
     "nextjs-app:start": "nx run nextjs-app:serve",
