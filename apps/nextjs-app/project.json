@@ -55,7 +55,7 @@
         "coverage/apps/nextjs-app"
       ],
       "options": {
-        "jestConfig": "apps/nextjs-app/jest.config.js",
+        "jestConfig": "apps/nextjs-app/jest.config.ts",
         "passWithNoTests": true
       }
     },
