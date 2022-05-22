@@ -1,6 +1,7 @@
 {
-  "root": "libs/shared/hooks",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/hooks/src",
+  "root": "libs/shared/hooks",
   "projectType": "library",
   "tags": [],
   "targets": {
