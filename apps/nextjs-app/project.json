@@ -1,6 +1,7 @@
 {
-  "root": "apps/nextjs-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/nextjs-app",
+  "root": "apps/nextjs-app",
   "projectType": "application",
   "targets": {
     "build": {
