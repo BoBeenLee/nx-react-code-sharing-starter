@@ -23,7 +23,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/shared/libs"],
       "options": {
-        "jestConfig": "libs/shared/libs/jest.config.js",
+        "jestConfig": "libs/shared/libs/jest.config.ts",
         "passWithNoTests": true
       }
     }
