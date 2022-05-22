@@ -81,7 +81,7 @@
         "coverage/apps/standalone-nextjs-app"
       ],
       "options": {
-        "jestConfig": "apps/standalone-nextjs-app/jest.config.js",
+        "jestConfig": "apps/standalone-nextjs-app/jest.config.ts",
         "passWithNoTests": true
       }
     },

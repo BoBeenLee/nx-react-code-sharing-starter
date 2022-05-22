@@ -1,4 +1,5 @@
-module.exports = {
+/* eslint-disable */
+export default {
   displayName: 'standalone-nextjs-app',
   preset: '../../jest.preset.js',
   transform: {
@@ -7,4 +8,5 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/standalone-nextjs-app',
+  testEnvironment: 'jsdom',
 };
