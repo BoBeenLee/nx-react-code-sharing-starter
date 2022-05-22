@@ -15,7 +15,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/shared/hooks"],
       "options": {
-        "jestConfig": "libs/shared/hooks/jest.config.js",
+        "jestConfig": "libs/shared/hooks/jest.config.ts",
         "passWithNoTests": true
       }
     }

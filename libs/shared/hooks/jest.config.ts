@@ -1,15 +1,10 @@
-module.exports = {
+/* eslint-disable */
+export default {
   displayName: 'shared-hooks',
   preset: '../../../jest.preset.js',
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.spec.json',
-    },
-  },
   transform: {
-    '^.+\\.[tj]sx?$': 'ts-jest',
+    '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../../coverage/libs/shared/hooks',
-  testEnvironment: 'jsdom',
 };
