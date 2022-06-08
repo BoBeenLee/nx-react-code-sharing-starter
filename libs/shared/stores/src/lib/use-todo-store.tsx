@@ -25,7 +25,9 @@ export const useTodoStore = create<TodoStoreProps>((set, get) => ({
       order: 1,
     },
   ],
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   initialize: () => {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   reset: () => {},
   addTodo: (name: string) => {
     const id = uniqueId('todo');
