@@ -1,7 +1,6 @@
-import _ from 'lodash';
 import getConfig from 'next/config';
 
-const { serverRuntimeConfig, publicRuntimeConfig } = _.defaultTo(getConfig(), {
+const { serverRuntimeConfig, publicRuntimeConfig } = (getConfig() ?? {
   serverRuntimeConfig: {},
   publicRuntimeConfig: {},
 });
