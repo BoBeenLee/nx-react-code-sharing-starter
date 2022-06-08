@@ -4,6 +4,7 @@
   "projects": {
     "nextjs-app": "apps/nextjs-app",
     "nextjs-app-e2e": "apps/nextjs-app-e2e",
+    "remix-app": "apps/remix-app",
     "rn-app": "apps/rn-app",
     "rn-app-e2e": "apps/rn-app-e2e",
     "sdk": "libs/sdk",
