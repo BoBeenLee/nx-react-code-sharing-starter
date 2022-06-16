@@ -5,7 +5,9 @@
     root
     ├── apps
     ├──── nextjs-app       # web
+    ├──── remix-app        # web
     ├──── rn-app           # app
+    ├──── standalone-app   # web
     ├── libs
     ├──── sdk              # sdk for test
     ├──── shared

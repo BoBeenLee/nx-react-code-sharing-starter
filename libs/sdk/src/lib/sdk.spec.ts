@@ -1,7 +1,8 @@
-import { sdk } from './sdk';
+import { SDK } from './sdk';
 
 describe('sdk', () => {
   it('should work', () => {
-    expect(sdk()).toEqual('sdk');
+    const sdk = new SDK();
+    expect(sdk.loggedInUserId).toEqual(undefined);
   });
 });
