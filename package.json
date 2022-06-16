@@ -34,6 +34,7 @@
     "@emotion/server": "11.4.0",
     "@emotion/styled": "11.9.3",
     "@nrwl/next": "14.3.5",
+    "@nrwl/react": "14.3.5",
     "@remix-run/node": "^1.5.1",
     "@remix-run/react": "^1.5.1",
     "@remix-run/serve": "^1.5.1",
@@ -68,7 +69,6 @@
     "@nrwl/jest": "14.3.5",
     "@nrwl/linter": "14.3.5",
     "@nrwl/nx-cloud": "14.1.1",
-    "@nrwl/react": "14.3.5",
     "@nrwl/react-native": "14.3.5",
     "@nrwl/remix": "^14.1.7",
     "@nrwl/storybook": "14.3.5",
@@ -140,4 +140,3 @@
     "commitMessage": "Deploy Storybook to GitHub Pages"
   }
 }
-
