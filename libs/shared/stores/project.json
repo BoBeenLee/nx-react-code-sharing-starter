@@ -1,7 +1,6 @@
 {
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/stores/src",
-  "root": "libs/shared/stores",
   "projectType": "library",
   "tags": [],
   "targets": {

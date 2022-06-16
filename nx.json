@@ -4,9 +4,6 @@
   "affected": {
     "defaultBase": "main"
   },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
   "implicitDependencies": {
     "package.json": {
       "dependencies": "*",
@@ -18,23 +15,10 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "OTMzNGZiYjktOGY2OS00MDBjLWJmOTItNTI5N2RmMGY5YzIwfHJlYWQtd3JpdGU="
       }
     }
-  },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
   },
   "generators": {
     "@nrwl/react": {
@@ -49,5 +33,10 @@
       }
     }
   },
-  "defaultProject": "nextjs-app"
+  "defaultProject": "nextjs-app",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  }
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/utils/src",
-  "root": "libs/shared/utils",
   "targets": {
     "build": {
       "executor": "@nrwl/js:tsc",

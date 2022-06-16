@@ -1,13 +1,11 @@
 {
-  "root": "apps/standalone-nextjs-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/standalone-nextjs-app",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nrwl/next:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/standalone-nextjs-app",
@@ -77,9 +75,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/standalone-nextjs-app"
-      ],
+      "outputs": ["coverage/apps/standalone-nextjs-app"],
       "options": {
         "jestConfig": "apps/standalone-nextjs-app/jest.config.ts",
         "passWithNoTests": true
@@ -87,13 +83,9 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "apps/standalone-nextjs-app/**/*.{ts,tsx,js,jsx}"
-        ]
+        "lintFilePatterns": ["apps/standalone-nextjs-app/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
