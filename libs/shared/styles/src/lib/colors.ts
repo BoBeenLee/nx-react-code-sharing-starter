@@ -1,4 +1,3 @@
-// tslint:disable:object-literal-sort-keys
 export const colors = {
   black50: '#80000000',
   black70: 'rgba(33,33,33,.7)',
@@ -42,4 +41,3 @@ export const colors = {
   purple700: '#46248f',
   sunflower: '#ffc310',
 };
-

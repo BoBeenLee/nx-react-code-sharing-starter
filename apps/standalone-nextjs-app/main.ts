@@ -8,8 +8,8 @@ const app = next({
   ...(process.env.NEXT_DIR
     ? { dir: process.env.NEXT_DIR }
     : {
-      dir: 'dist/apps/standalone-nextjs-app',
-    }),
+        dir: 'dist/apps/standalone-nextjs-app',
+      }),
 });
 
 customServer(app, { port }, {});

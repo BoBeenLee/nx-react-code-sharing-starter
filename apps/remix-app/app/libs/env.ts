@@ -1,4 +1,3 @@
-
 export const env = {
-  API_URL: "API-URL",
+  API_URL: 'API-URL',
 };

@@ -1,9 +1,9 @@
 import getConfig from 'next/config';
 
-const { serverRuntimeConfig, publicRuntimeConfig } = (getConfig() ?? {
+const { serverRuntimeConfig, publicRuntimeConfig } = getConfig() ?? {
   serverRuntimeConfig: {},
   publicRuntimeConfig: {},
-});
+};
 const {
   API_URL,
 }: {
