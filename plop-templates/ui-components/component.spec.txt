@@ -1,0 +1,12 @@
+import { render } from '@testing-library/react';
+
+import -- PLOP COMPONENT NAME HERE -- from './-- PLOP COMPONENT FOLDER NAME HERE --';
+
+describe('-- PLOP COMPONENT NAME HERE --', () => {
+  it('should render successfully', () => {
+    const { baseElement } = render(
+      <-- PLOP COMPONENT NAME HERE -- />
+    );
+    expect(baseElement).toBeTruthy();
+  });
+});
