@@ -1,0 +1,13 @@
+import { Story, Meta } from '@storybook/react';
+import { -- PLOP COMPONENT NAME HERE --, -- PLOP COMPONENT NAME HERE --Props } from './-- PLOP COMPONENT FOLDER NAME HERE --';
+
+export default {
+  component: -- PLOP COMPONENT NAME HERE --,
+  title: '-- PLOP LAYER FOLDER HERE --/-- PLOP COMPONENT NAME HERE --',
+  argTypes: {},
+} as Meta;
+
+const Template: Story<-- PLOP COMPONENT NAME HERE --Props> = (args) => <-- PLOP COMPONENT NAME HERE -- {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {};

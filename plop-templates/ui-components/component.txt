@@ -1,0 +1,11 @@
+import styled from '@emotion/primitives';
+
+export interface -- PLOP COMPONENT NAME HERE --Props {}
+
+const Styled-- PLOP COMPONENT NAME HERE -- = styled.img``;
+
+export function -- PLOP COMPONENT NAME HERE --(props: -- PLOP COMPONENT NAME HERE --Props) {
+  return <Styled-- PLOP COMPONENT NAME HERE -->hello world</Styled-- PLOP COMPONENT NAME HERE -->;
+}
+
+export default -- PLOP COMPONENT NAME HERE --;
