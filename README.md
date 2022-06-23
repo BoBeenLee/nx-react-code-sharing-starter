@@ -1,4 +1,4 @@
-# NxReactCodeSharing
+# NxReactCodeSharing ![build](https://github.com/BoBeenLee/nx-react-code-sharing/actions/workflows/ci-cd.yml/badge.svg)
 
 ## 📂 Directory structure
 
