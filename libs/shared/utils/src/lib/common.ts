@@ -118,18 +118,6 @@ export function delay(seconds = 500) {
   });
 }
 
-export function isJSON(str: string) {
-  try {
-    const obj = JSON.parse(str);
-    if (obj && typeof obj === 'object' && obj !== null) {
-      return true;
-    }
-  } catch (err) {
-    // NOTHING
-  }
-  return false;
-}
-
 export const getValue = <T>(func: () => T, defaultValue: T) => {
   try {
     return func();
