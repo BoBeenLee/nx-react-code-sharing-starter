@@ -1,4 +1,5 @@
-# NxReactCodeSharing ![build](https://github.com/BoBeenLee/nx-react-code-sharing/actions/workflows/ci-cd.yml/badge.svg)
+# 🏛 nx-react-code-sharing-starter
+ ![build](https://github.com/BoBeenLee/nx-react-code-sharing/actions/workflows/ci-cd.yml/badge.svg)
 
 ## Features
 
