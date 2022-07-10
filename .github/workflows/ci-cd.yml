@@ -27,7 +27,7 @@ jobs:
 
       - name: Compute dependency cache key
         id: compute_lockfile_hash
-        run: echo "::set-output name=hash::${{ hashFiles('yarn-lock.json') }}"
+        run: echo "::set-output name=hash::${{ hashFiles('yarn.lock') }}"
 
       - name: Check dependency cache
         uses: actions/cache@v2
