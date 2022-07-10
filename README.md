@@ -1,6 +1,11 @@
-# 🏛 nx-react-code-sharing-starter
+<div align="center">
+<h1>🏛 nx-react-code-sharing-starter</h1>
+
+<p>Next.js + Remix(Working in progress) + React Native + Emotion + TypeScript starter packed with useful development features.</p>
 
 ![build](https://github.com/BoBeenLee/nx-react-code-sharing/actions/workflows/ci-cd.yml/badge.svg)
+
+</div>
 
 ## ✨ Features
 
