@@ -27,7 +27,7 @@ jobs:
 
       - name: Compute dependency cache key
         id: compute_lockfile_hash
-        run: echo "::set-output name=hash::${{ hashFiles('package-lock.json') }}"
+        run: echo "::set-output name=hash::${{ hashFiles('yarn-lock.json') }}"
 
       - name: Check dependency cache
         uses: actions/cache@v2
@@ -40,7 +40,7 @@ jobs:
         # use '.', not '[]' with hyphenated variables
         # https://github.com/nektos/act/issues/104#issuecomment-592892249
         if: steps.cache_dependencies.outputs.cache-hit == ''
-        run: npm ci --legacy-peer-deps --loglevel=error
+        run: yarn install --frozen-lockfile
     outputs:
       dependency_cache_key: ${{ steps.compute_lockfile_hash.outputs.hash }}
 
