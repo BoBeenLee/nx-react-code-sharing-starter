@@ -2,6 +2,13 @@
   "name": "nx-react-code-sharing",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": "https://github.com/BoBeenLee/nx-react-code-sharing-starter",
+  "private": true,
+  "author": "BoBeenLee",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
@@ -26,7 +33,6 @@
     "sdk:build": "nx run sdk:build",
     "sdk:publish": "nx run sdk:publish"
   },
-  "private": true,
   "dependencies": {
     "@emotion/cache": "^11.7.1",
     "@emotion/css": "^11.9.0",
