@@ -1,5 +1,6 @@
 # 🏛 nx-react-code-sharing-starter
- ![build](https://github.com/BoBeenLee/nx-react-code-sharing/actions/workflows/ci-cd.yml/badge.svg)
+
+![build](https://github.com/BoBeenLee/nx-react-code-sharing/actions/workflows/ci-cd.yml/badge.svg)
 
 ## Features
 
@@ -16,27 +17,50 @@
 - 💖 Prettier — Format your code consistently
 - 👷 Github Actions — Lint, Test your code on Master Branch, Automatic Storybook Deployment
 
-
 ## 📂 Directory structure
 
     root
     ├── apps
-    ├──── nextjs-app       # web
-    ├──── remix-app        # web
-    ├──── rn-app           # app
-    ├──── standalone-app   # web
+    ├──── nextjs-app       # nextjs app
+    ├──── remix-app        # remix app
+    ├──── rn-app           # react native app
+    ├──── standalone-app   # nextjs standalone app
     ├── libs
-    ├──── sdk              # sdk for test
+    ├──── sdk              # sdk
     ├──── shared
-    ├─────── interfaces    # 도메인에 따른 인터페이스
-    ├─────── libs          # 공통 라이브러리 ex) 로그, 스토리지...
-    ├─────── ui-components # 공통 UI 컴포넌트
-    ├─────── stores        # 공통 상태관리스토어
-    ├─────── styles        # 공통 스타일
-    ├─────── utils         # 공통 유틸
+    ├─────── interfaces    # shared interfaces (ex) User, Role, AccessToken ...)
+    ├─────── libs          # primitive libs ex) logging, storage, analytics
+    ├─────── ui-components # shared ui components, styles (ex) Button, Text... )
+    ├─────── stores        # shared state management (ex) Todo based on zustand )
+    ├─────── styles        # (deprecated)
+    ├─────── utils         # shared utils (ex) string, datetime, object, uri ...)
     └── README.md
 
+## Getting Started
+
+### Install dependencies
+
+```bash
+yarn install
+```
+
+### Run the development server
+
+You can start the nextjs using this command:
+
+```bash
+yarn dev
+```
+
+### Change defaults
+
+There are some things you need to change including title, urls, favicons, etc.
+
+Find all texts with `nx-react-code-sharing`, then change the package name
+
 ## Convention
+
+### Naming Convention
 
 - 파일 이름 네이밍
   - 하이픈 형식 ex) z-index.ts, login-modal.tsx ...
@@ -49,6 +73,10 @@
   - 고유 기능을 의미한다면 단수
     ex) app/email, app/login ...
 
+### Commit Convention
+
+- This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
+
 ## Global Types Definition Setup
 
 - tsconfig.lib.json, tsconfig.app.json files 코드를 아래와 같이 추가합니다.
@@ -60,7 +88,7 @@
 ],
 ```
 
-### 참고 문서
+### Reference
 
 - https://stackoverflow.com/questions/68986789/nx-react-next-js-shared-type-declaration-file
 
@@ -89,34 +117,11 @@ heroku container:release web --app=nextjs-app-dev-app
 
 Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Contributors
 
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars0.githubusercontent.com/u/1489321?v=4" width="100px;"/><br /><sub><b>BoBeenLee</b></sub>](https://bbl.netlify.com/)<br />[💬](#question-BoBinLee "Answering Questions") [📝](#blog-BoBinLee "Blogposts") [🐛](https://github.com/BoBinLee/asking-price/issues?q=author%3ABoBinLee "Bug reports") [💻](https://github.com/BoBinLee/asking-price/commits?author=BoBinLee "Code") [🎨](#design-BoBinLee "Design") [📖](https://github.com/BoBinLee/asking-price/commits?author=BoBinLee "Documentation") [📋](#eventOrganizing-BoBinLee "Event Organizing") [💡](#example-BoBinLee "Examples") [💵](#financial-BoBinLee "Financial") [🔍](#fundingFinding-BoBinLee "Funding Finding") [🤔](#ideas-BoBinLee "Ideas, Planning, & Feedback") [🚇](#infra-BoBinLee "Infrastructure (Hosting, Build-Tools, etc)") [📦](#platform-BoBinLee "Packaging/porting to new platform") [🔌](#plugin-BoBinLee "Plugin/utility libraries") [👀](#review-BoBinLee "Reviewed Pull Requests") [📢](#talk-BoBinLee "Talks") [⚠️](https://github.com/BoBinLee/asking-price/commits?author=BoBinLee "Tests") [🔧](#tool-BoBinLee "Tools") [🌍](#translation-BoBinLee "Translation") [✅](#tutorial-BoBinLee "Tutorials") [📹](#video-BoBinLee "Videos") |
+| :---: |
 
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `nx e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+<!-- ALL-CONTRIBUTORS-LIST:END -->

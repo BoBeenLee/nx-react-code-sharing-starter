@@ -8,6 +8,7 @@
     "build:affected:all": "nx affected --target=build --all",
     "test": "nx test",
     "test:affected": "nx affected --target=test --base=master~1 --head=master",
+    "dev": "nx run nextjs-app:serve",
     "nextjs-app:start": "nx run nextjs-app:serve",
     "nextjs-app:start:qa": "env-cmd -f ./apps/nextjs-app/.qa.env nx run nextjs-app:serve",
     "nextjs-app:release": "nx run nextjs-app:release",
@@ -141,4 +142,3 @@
     "commitMessage": "Deploy Storybook to GitHub Pages"
   }
 }
-
