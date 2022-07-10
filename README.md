@@ -2,7 +2,7 @@
 
 ![build](https://github.com/BoBeenLee/nx-react-code-sharing/actions/workflows/ci-cd.yml/badge.svg)
 
-## Features
+## ✨ Features
 
 - ⚡️ Next.js 12
 - ⚛️ React 18
@@ -36,15 +36,15 @@
     ├─────── utils         # shared utils (ex) string, datetime, object, uri ...)
     └── README.md
 
-## Getting Started
+## ⚡️ Getting Started
 
-### Install dependencies
+### 1. Install dependencies
 
 ```bash
 yarn install
 ```
 
-### Run the development server
+### 2. Run the development server
 
 You can start the nextjs using this command:
 
@@ -52,13 +52,13 @@ You can start the nextjs using this command:
 yarn dev
 ```
 
-### Change defaults
+### 3. Change defaults
 
 There are some things you need to change including title, urls, favicons, etc.
 
 Find all texts with `nx-react-code-sharing`, then change the package name
 
-## Convention
+## 📚 Convention
 
 ### Naming Convention
 
