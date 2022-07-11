@@ -26,7 +26,6 @@
     root
     ├── apps
     ├──── nextjs-app       # nextjs app
-    ├──── remix-app        # remix app
     ├──── rn-app           # react native app
     ├──── standalone-app   # nextjs standalone app
     ├── libs
