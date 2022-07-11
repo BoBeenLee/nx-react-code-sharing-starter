@@ -13,7 +13,7 @@ import {
 // @ts-ignore
 import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrowser';
 
-import { Bold.Bold } from '@nx-react-code-sharing/shared-ui-components';
+import { Bold } from '@nx-react-code-sharing/shared-ui-components';
 import {
   todosByOrderDESCSelector,
   useTodoStore,
