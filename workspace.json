@@ -11,7 +11,6 @@
     "shared-hooks": "libs/shared/hooks",
     "shared-libs": "libs/shared/libs",
     "shared-stores": "libs/shared/stores",
-    "shared-styles": "libs/shared/styles",
     "shared-ui-components": "libs/shared/ui-components",
     "shared-utils": "libs/shared/utils",
     "standalone-nextjs-app": "apps/standalone-nextjs-app",

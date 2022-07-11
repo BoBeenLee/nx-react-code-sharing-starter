@@ -1,5 +1,6 @@
 import { getKeys } from '@nx-react-code-sharing/shared-utils';
 import React from 'react';
+
 import { StyleSheet } from 'react-native';
 
 import RNText, { TextProps } from '../text/text';
