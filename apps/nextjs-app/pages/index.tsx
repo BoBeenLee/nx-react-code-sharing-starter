@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { test } from '@nx-react-code-sharing/shared-apis';
-import { Bold20 } from '@nx-react-code-sharing/shared-ui-components';
+import { Bold } from '@nx-react-code-sharing/shared-ui-components';
 import {
   todosByOrderDESCSelector,
   useTodoStore,
@@ -38,10 +38,10 @@ export function Index() {
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
-            <Bold20>
+            <Bold.Bold20>
               <span> Hello there, </span>
               Welcome nx-react-code-sharing 👋 Todo List (API_URL={env.API_URL})
-            </Bold20>
+            </Bold.Bold20>
             <ul>
               {todos.map((todo) => (
                 <li key={todo.id}>{todo.name}</li>

@@ -13,7 +13,7 @@ import {
 // @ts-ignore
 import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrowser';
 
-import { Bold12, Bold8 } from '@nx-react-code-sharing/shared-ui-components';
+import { Bold.Bold } from '@nx-react-code-sharing/shared-ui-components';
 import {
   todosByOrderDESCSelector,
   useTodoStore,
@@ -37,13 +37,13 @@ export const App = () => {
         >
           <View style={styles.section}>
             <Text style={styles.textLg}>Hello there,</Text>
-            <Bold8 testID="heading">
+            <Bold.Bold8 testID="heading">
               Welcome RnApp 👋 Todo List (API_URL={env.API_URL})
-            </Bold8>
+            </Bold.Bold8>
           </View>
           <View style={styles.todos}>
             {todos.map((todo) => (
-              <Bold12 key={todo.id}>{todo.name}</Bold12>
+              <Bold.Bold12 key={todo.id}>{todo.name}</Bold.Bold12>
             ))}
           </View>
         </ScrollView>

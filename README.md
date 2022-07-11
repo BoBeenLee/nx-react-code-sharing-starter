@@ -1,7 +1,7 @@
 <div align="center">
 <h1>🏛 nx-react-code-sharing-starter</h1>
 
-<p>Next.js + Remix(Working in progress) + React Native + Emotion + TypeScript starter packed with useful development features.</p>
+<p>Next.js + React Native + TypeScript + Storybook starter packed with useful development features.</p>
 
 ![build](https://github.com/BoBeenLee/nx-react-code-sharing/actions/workflows/ci-cd.yml/badge.svg)
 
@@ -13,7 +13,6 @@
 - ⚛️ React 18
 - 📱 React Native
 - ✨ TypeScript
-- 💨 Emotion — Configured with Emotion Primitive which share React Native And Nextjs styling
 - 📚 Storybook - Build component driven UIs faster
 - 🏗 Nx.dev - Smart, Fast and Extensible Build System
 - 🃏 Jest — Configured for unit testing

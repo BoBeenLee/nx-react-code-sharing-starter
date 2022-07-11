@@ -10,6 +10,7 @@
   - Default Components
     - Button, Header, Image ...
 - setup font-family
+- Storybook Setup
 
 ### Examine
 
