@@ -1,6 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import styled from '@emotion/styled';
-import { Bold8, Bold10, Bold12, Bold13, Bold14 } from './typography';
+import { Bold } from './typography';
 
 export default {
   title: 'Typography',
@@ -15,11 +15,11 @@ const Container = styled.div`
 const Template: Story = () => {
   return (
     <Container>
-      <Bold8>Bold8</Bold8>
-      <Bold10>Bold10</Bold10>
-      <Bold12>Bold12</Bold12>
-      <Bold13>Bold13</Bold13>
-      <Bold14>Bold14</Bold14>
+      <Bold.Bold8>Bold.Bold8</Bold.Bold8>
+      <Bold.Bold10>Bold.Bold10</Bold.Bold10>
+      <Bold.Bold12>Bold.Bold12</Bold.Bold12>
+      <Bold.Bold13>Bold.Bold13</Bold.Bold13>
+      <Bold.Bold14>Bold.Bold14</Bold.Bold14>
     </Container>
   );
 };

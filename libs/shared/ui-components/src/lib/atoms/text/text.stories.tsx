@@ -6,7 +6,9 @@ export default {
   title: 'Text',
 } as Meta;
 
-const Template: Story<TextProps> = (args) => <RNText {...args} />;
+const Template: Story<TextProps> = (args) => (
+  <RNText {...args}>Hello World</RNText>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};
