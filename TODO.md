@@ -10,7 +10,6 @@
   - Default Components
     - Button, Header, Image ...
 - setup font-family
-- Storybook Setup
 - React Native Jest 설정
 
 ### Examine
