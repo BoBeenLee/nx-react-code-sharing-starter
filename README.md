@@ -35,7 +35,6 @@
     ├─────── libs          # primitive libs ex) logging, storage, analytics
     ├─────── ui-components # shared ui components, styles (ex) Button, Text... )
     ├─────── stores        # shared state management (ex) Todo based on zustand )
-    ├─────── styles        # (deprecated)
     ├─────── utils         # shared utils (ex) string, datetime, object, uri ...)
     └── README.md
 
