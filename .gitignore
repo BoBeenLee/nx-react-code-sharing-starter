@@ -43,6 +43,7 @@ Thumbs.db
 
 **/ios/**/build/
 **/ios/**/*.pbxuser
+ios/.xcode.env.local
 !default.pbxuser
 *.mode1v3
 !default.mode1v3
@@ -82,6 +83,7 @@ buck-out/
 */fastlane/report.xml
 */fastlane/Preview.html
 */fastlane/screenshots
+**/fastlane/test_output
 
 ## Bundle artifact
 *.jsbundle
@@ -91,3 +93,4 @@ buck-out/
 /
 
 apps/rn-app-e2e/artifacts
+apps/rn-app-2-e2e/artifacts
