@@ -46,7 +46,7 @@
 ### 1. Install dependencies
 
 ```bash
-yarn install
+npm i --legacy-peer-deps
 ```
 
 ### 2. Run the development server
@@ -54,7 +54,7 @@ yarn install
 You can start the nextjs using this command:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 ### 3. Change defaults
