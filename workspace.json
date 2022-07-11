@@ -5,7 +5,6 @@
     "nextjs-app": "apps/nextjs-app",
     "nextjs-app-e2e": "apps/nextjs-app-e2e",
     "remix-app": "apps/remix-app",
-    "rn-app": "apps/rn-app",
     "sdk": "libs/sdk",
     "shared-apis": "libs/shared/apis",
     "shared-hooks": "libs/shared/hooks",
