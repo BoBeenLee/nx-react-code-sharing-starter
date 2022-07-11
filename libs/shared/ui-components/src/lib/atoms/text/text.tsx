@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TextProps as RNTextProps } from 'react-native';
-
-import { colors } from '@nx-react-code-sharing/shared-styles';
+import { colors } from "../../styles/colors";
 
 type FontWeight = 'BOLD' | 'MEDIUM' | 'REGULAR';
 
