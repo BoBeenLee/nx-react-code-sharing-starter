@@ -94,9 +94,11 @@ Find all texts with `nx-react-code-sharing`, then change the package name
 
 - https://stackoverflow.com/questions/68986789/nx-react-next-js-shared-type-declaration-file
 
-## Development server
+## Deployment
 
-### Development Deployment
+### Dev Deployment
+
+- Heroku
 
 ```
 heroku container:login
@@ -114,10 +116,6 @@ heroku container:release web --app=nextjs-app-dev-app
 
 - rnapp 실행시 에러 `Flipper-DoubleConversion` requires CocoaPods version `>= 1.9`, which is not satisfied by your current version, `1.8.4`
   - `gem install cocoapods`으로 cocoapods 업데이트 하기 위해선 `rvm list` -> `rvm use 3.0` 3.0 버젼으로 맞추고 다시 `gem install cocoapods` 합니다.
-
-## Build
-
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Contributors
 
