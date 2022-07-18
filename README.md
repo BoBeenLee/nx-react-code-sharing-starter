@@ -30,11 +30,14 @@
     ├──── standalone-app   # nextjs standalone app
     ├── libs
     ├──── sdk              # sdk
+    ├──── features
+    ├─────── todo
+    ├────────── components
+    ├────────── interfaces
+    ├────────── stores
     ├──── shared
-    ├─────── interfaces    # shared interfaces (ex) User, Role, AccessToken ...)
     ├─────── libs          # primitive libs ex) logging, storage, analytics
     ├─────── ui-components # shared ui components, styles (ex) Button, Text... )
-    ├─────── stores        # shared state management (ex) Todo based on zustand )
     ├─────── utils         # shared utils (ex) string, datetime, object, uri ...)
     └── README.md
 
