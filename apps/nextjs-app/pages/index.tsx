@@ -6,6 +6,7 @@ import {
 } from '@nx-react-code-sharing/features-todo';
 import { useEffect } from 'react';
 import { env } from '../libs/env';
+import Layout from "../components/layout";
 
 
 export function Index() {
@@ -24,7 +25,7 @@ export function Index() {
   }, []);
 
   return (
-    <div>
+    <Layout>
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
@@ -40,7 +41,7 @@ export function Index() {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 

@@ -18,13 +18,13 @@ const defaultMeta = {
   },
 };
 
-type SEOProps = {
+export interface SEOProps extends Partial<typeof defaultMeta> {
   article?: {
     date: string;
     author: string;
   };
   templateTitle?: string;
-} & Partial<typeof defaultMeta>;
+}
 
 export default function SEO(props: SEOProps) {
   const router = useRouter();
