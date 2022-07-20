@@ -5,6 +5,7 @@
 
 ![build](https://github.com/BoBeenLee/nx-react-code-sharing/actions/workflows/ci-cd.yml/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/bobeenlee/nx-react-code-sharing-starter/badge)](https://www.codefactor.io/repository/github/bobeenlee/nx-react-code-sharing-starter)
+![lastUpdated](https://img.shields.io/github/last-commit/BoBeenLee/nx-react-code-sharing-starter/master)
 
 </div>
 
