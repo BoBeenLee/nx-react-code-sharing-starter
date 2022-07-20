@@ -1,26 +1,28 @@
 import { Story, Meta } from '@storybook/react';
-import styled from '@emotion/styled';
+import { StyleSheet } from 'react-native';
 import { Bold } from './typography';
 
 export default {
   title: 'Typography',
 } as Meta;
 
-const Container = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-`;
+const styles = StyleSheet.create({
+  container: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+  },
+});
 
 const Template: Story = () => {
   return (
-    <Container>
+    <div style={styles.container}>
       <Bold.Bold8>Bold.Bold8</Bold.Bold8>
       <Bold.Bold10>Bold.Bold10</Bold.Bold10>
       <Bold.Bold12>Bold.Bold12</Bold.Bold12>
       <Bold.Bold13>Bold.Bold13</Bold.Bold13>
       <Bold.Bold14>Bold.Bold14</Bold.Bold14>
-    </Container>
+    </div>
   );
 };
 

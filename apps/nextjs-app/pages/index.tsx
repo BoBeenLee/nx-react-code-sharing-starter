@@ -1,4 +1,3 @@
-import styled from '@emotion/styled';
 import { test } from '@nx-react-code-sharing/shared-apis';
 import { Bold } from '@nx-react-code-sharing/shared-ui-components';
 import {
@@ -8,18 +7,9 @@ import {
 import { useEffect } from 'react';
 import { env } from '../libs/env';
 
-const StyledPage = styled.div`
-  .page {
-  }
-`;
 
 export function Index() {
   const todos = useTodoStore(todosByOrderDESCSelector);
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.@emotion/styled file.
-   */
 
   useEffect(() => {
     const fetchTest = async () => {
@@ -34,7 +24,7 @@ export function Index() {
   }, []);
 
   return (
-    <StyledPage>
+    <div>
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
@@ -50,7 +40,7 @@ export function Index() {
           </div>
         </div>
       </div>
-    </StyledPage>
+    </div>
   );
 }
 

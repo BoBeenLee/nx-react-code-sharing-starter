@@ -1,6 +1,5 @@
 declare module '*.json';
 declare module 'moment/min/moment-with-locales';
-declare module '@emotion/primitives';
 
 type Subtract<T, V> = Pick<T, Exclude<keyof T, keyof V>>;
 type RetrieveAsyncFunc<T extends (...args: any[]) => any> =
