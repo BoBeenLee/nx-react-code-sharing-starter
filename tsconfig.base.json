@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-react-code-sharing/features-todo": [
+        "libs/features/todo/src/index.ts"
+      ],
       "@nx-react-code-sharing/sdk": ["libs/sdk/src/index.ts"],
       "@nx-react-code-sharing/shared-apis": ["libs/shared/apis/src/index.ts"],
       "@nx-react-code-sharing/shared-libs": ["libs/shared/libs/src/index.ts"],

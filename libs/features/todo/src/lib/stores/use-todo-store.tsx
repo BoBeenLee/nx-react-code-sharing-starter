@@ -1,15 +1,10 @@
 import { uniqueId } from '@nx-react-code-sharing/shared-utils';
 import produce from 'immer';
 import create from 'zustand';
-
-interface TodoProps {
-  id: string;
-  name: string;
-  order: number;
-}
+import { Todo } from '../interfaces/todo';
 
 interface TodoStoreProps {
-  todos: TodoProps[];
+  todos: Todo[];
   initialize: () => void;
   reset: () => void;
   addTodo: (name: string) => void;

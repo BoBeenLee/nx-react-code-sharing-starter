@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "features-todo": "libs/features/todo",
     "nextjs-app": "apps/nextjs-app",
     "nextjs-app-e2e": "apps/nextjs-app-e2e",
     "rn-app": "apps/rn-app",

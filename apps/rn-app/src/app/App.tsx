@@ -17,7 +17,7 @@ import { Bold } from '@nx-react-code-sharing/shared-ui-components';
 import {
   todosByOrderDESCSelector,
   useTodoStore,
-} from '@nx-react-code-sharing/shared/stores';
+} from '@nx-react-code-sharing/features-todo';
 import { env } from '../libs/env';
 
 export const App = () => {
