@@ -12,11 +12,8 @@
     "@react-native-async-storage/async-storage": "*",
     "@testing-library/react": "*",
     "@storybook/react": "*",
-    "@emotion/primitives": "*",
-    "@emotion/styled": "*",
     "qs": "*",
     "immer": "*",
-    "zustand": "*",
-    "@emotion/react": "*"
+    "zustand": "*"
   }
 }
