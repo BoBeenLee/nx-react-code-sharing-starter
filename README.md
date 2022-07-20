@@ -30,7 +30,7 @@
     ├──── standalone-app   # nextjs standalone app
     ├── libs
     ├──── sdk              # sdk
-    ├──── features
+    ├──── features         # all of the code for a feature and putting it in one single place (ex) todo)
     ├─────── todo
     ├────────── components
     ├────────── interfaces
