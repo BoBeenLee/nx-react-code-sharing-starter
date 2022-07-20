@@ -1,5 +1,11 @@
 import type * as React from 'react';
 
+interface Omit {
+  <T extends object, K extends [...(keyof T)[]]>(obj: T, ...keys: K): {
+    [K2 in Exclude<keyof T, K[number]>]: T[K2];
+  };
+}
+
 export const sortedObject = <T extends object>(obj: T) => {
   const keys = Object.keys(obj).sort() as Array<keyof T>;
   return keys.reduce((res, key) => {
@@ -35,12 +41,12 @@ export const uniqueId = (() => {
   };
 })();
 
-export const once = <R>(func: (...rest: any[]) => R) => {
+export const once = <R>(func: (...rest: unknown[]) => R) => {
   let isCalled = false,
     result: R | null = null;
-  return (...rest: any[]): R => {
+  return (...rest: unknown[]): R => {
     if (isCalled) {
-      return result!;
+      return result as R;
     }
     isCalled = true;
     result = func(...rest);
@@ -54,12 +60,14 @@ export const defaultNumber = (num: string, defaultValue: number) => {
   return isNumber(num) ? Number(num) : defaultValue;
 };
 
-export const isEmpty = <T>(obj: T | null | undefined) => {
-  if (obj === undefined || obj === null) {
+export const isEmpty = <T>(obj: T | null | undefined | '' | []) => {
+  if (obj === undefined || obj === null || obj === '') {
     return true;
   }
-  const res = obj as any;
-  return JSON.stringify(res) === JSON.stringify({}) || res === '' || res === [];
+  if ('length' in obj) {
+    return obj.length === 0;
+  }
+  return JSON.stringify(obj) === JSON.stringify({});
 };
 
 export const defaultEmpty = <T>(obj: T | null | undefined, defaultValue: T) => {
@@ -72,12 +80,6 @@ export const defaultEmpty = <T>(obj: T | null | undefined, defaultValue: T) => {
 export const identity = <T>(value?: T) => {
   return value;
 };
-
-interface Omit {
-  <T extends object, K extends [...(keyof T)[]]>(obj: T, ...keys: K): {
-    [K2 in Exclude<keyof T, K[number]>]: T[K2];
-  };
-}
 
 export const omit: Omit = (obj, ...keys) => {
   const ret = {} as {
@@ -101,8 +103,8 @@ export const times = <T>(size: number, func: (index: number) => T): T[] => {
 };
 
 export const enhanceNoError =
-  (func: any) =>
-  async (...args: any[]) => {
+  (func: (...args: unknown[]) => unknown) =>
+  async (...args: unknown[]) => {
     try {
       return await func(...args);
     } catch (error) {
@@ -111,7 +113,7 @@ export const enhanceNoError =
   };
 
 export function delay(seconds = 500) {
-  return new Promise((resolve, __) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(undefined);
     }, seconds);
@@ -134,14 +136,15 @@ export const filterNull = <T>(iterable: Array<T | null> | null) => {
 };
 
 export const filterEmpty = <T>(
-  iterable: Array<T | null | undefined> | null | undefined
-) => {
-  if (!iterable) {
+  iterable: Array<T | null | undefined | ''> | null | undefined
+): Array<T> => {
+  if (iterable === null || iterable === undefined || iterable.length === 0) {
     return [];
   }
-  return iterable.filter(
-    (i) => i !== null && i !== undefined && (i as any) !== ''
-  ) as T[];
+  const res = iterable.filter(
+    (i): i is T => ![null, undefined, ''].some((key) => key === i)
+  );
+  return res;
 };
 
 export const mergeRefs =
@@ -150,7 +153,8 @@ export const mergeRefs =
     refs.forEach((resolvableRef) => {
       if (typeof resolvableRef === 'function') {
         resolvableRef(ref);
-      } else {
+      } else if (resolvableRef !== null) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (resolvableRef as any).current = ref;
       }
     });
