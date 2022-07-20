@@ -4,6 +4,7 @@
 <p>Next.js + React Native + TypeScript + Storybook starter packed with useful development features.</p>
 
 ![build](https://github.com/BoBeenLee/nx-react-code-sharing/actions/workflows/ci-cd.yml/badge.svg)
+[![CodeFactor](https://www.codefactor.io/repository/github/bobeenlee/nx-react-code-sharing-starter/badge)](https://www.codefactor.io/repository/github/bobeenlee/nx-react-code-sharing-starter)
 
 </div>
 
