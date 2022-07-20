@@ -1,6 +1,5 @@
 # Todo
 
-- add badges (codefactor, Maintainability Rating, depfu, Last Update)
 - 👀 Default Open Graph — Awesome open graph generated using og, fork it and deploy!
 - 🐶 Husky & Lint Staged — Run scripts on your staged files before they are committed
 - 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
