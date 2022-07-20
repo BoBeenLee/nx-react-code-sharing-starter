@@ -36,7 +36,10 @@
     ├────────── interfaces
     ├────────── stores
     ├──── shared
+    ├─────── apis          # initalize api setup, add api middleware
+    ├─────── hooks         # shared hooks (ex) timer, debounce...)
     ├─────── libs          # primitive libs ex) logging, storage, analytics
+    ├─────── stores        # shared state management (ex) Toast, Notification... )
     ├─────── ui-components # shared ui components, styles (ex) Button, Text... )
     ├─────── utils         # shared utils (ex) string, datetime, object, uri ...)
     └── README.md
