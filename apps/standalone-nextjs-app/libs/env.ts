@@ -1,6 +1,6 @@
 import getConfig from 'next/config';
 
-const { serverRuntimeConfig, publicRuntimeConfig } = getConfig() ?? {
+const { publicRuntimeConfig } = getConfig() ?? {
   serverRuntimeConfig: {},
   publicRuntimeConfig: {},
 };
