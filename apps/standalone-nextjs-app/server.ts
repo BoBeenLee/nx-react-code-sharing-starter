@@ -1,4 +1,3 @@
-import next from 'next';
 import express from 'express';
 
 export default async function customServer(app, settings, proxyConfig) {

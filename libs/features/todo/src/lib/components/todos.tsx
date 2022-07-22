@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TextProps as RNTextProps } from 'react-native';
+import { Text } from 'react-native';
 
 /* eslint-disable-next-line */
 export interface TodosProps {}

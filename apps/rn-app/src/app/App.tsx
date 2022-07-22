@@ -7,11 +7,9 @@ import {
   View,
   Text,
   StatusBar,
-  TouchableOpacity,
 } from 'react-native';
 
 // @ts-ignore
-import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrowser';
 
 import { Bold } from '@nx-react-code-sharing/shared-ui-components';
 import {
