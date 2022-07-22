@@ -20,6 +20,11 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/standalone-nextjs-app-e2e/**/*.{js,ts}"]
+      },
+      "configurations": {
+        "fix": {
+          "fix": true
+        }
       }
     }
   },

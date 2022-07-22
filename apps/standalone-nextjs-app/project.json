@@ -86,6 +86,11 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/standalone-nextjs-app/**/*.{ts,tsx,js,jsx}"]
+      },
+      "configurations": {
+        "fix": {
+          "fix": true
+        }
       }
     }
   },

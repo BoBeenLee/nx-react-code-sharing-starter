@@ -9,6 +9,11 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/shared/hooks/**/*.{ts,tsx,js,jsx}"]
+      },
+      "configurations": {
+        "fix": {
+          "fix": true
+        }
       }
     },
     "test": {

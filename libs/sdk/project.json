@@ -25,6 +25,11 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/sdk/**/*.ts"]
+      },
+      "configurations": {
+        "fix": {
+          "fix": true
+        }
       }
     },
     "test": {

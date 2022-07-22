@@ -56,6 +56,11 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/rn-app-e2e/**/*.{ts,tsx,js,jsx}"]
+      },
+      "configurations": {
+        "fix": {
+          "fix": true
+        }
       }
     }
   },

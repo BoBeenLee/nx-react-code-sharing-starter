@@ -17,6 +17,11 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/shared/utils/**/*.ts"]
+      },
+      "configurations": {
+        "fix": {
+          "fix": true
+        }
       }
     },
     "test": {

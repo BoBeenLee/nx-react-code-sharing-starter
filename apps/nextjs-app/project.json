@@ -60,6 +60,11 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/nextjs-app/**/*.{ts,tsx,js,jsx}"]
+      },
+      "configurations": {
+        "fix": {
+          "fix": true
+        }
       }
     },
     "release": {
