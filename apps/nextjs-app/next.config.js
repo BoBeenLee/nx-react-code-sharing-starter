@@ -1,7 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const withNx = require('@nrwl/next/plugins/with-nx');
 
-const { API_URL } = process.env;
+const { API_URL, ANALYZE } = process.env;
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: ANALYZE === 'true',
+});
 
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
@@ -18,4 +21,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withNx(nextConfig);
+module.exports = withBundleAnalyzer(withNx(nextConfig));
