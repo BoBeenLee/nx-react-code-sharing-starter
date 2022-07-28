@@ -1,5 +1,5 @@
 {
-  "name": "@nx-react-code-sharing/shared-apis",
+  "name": "@nx-react-code-sharing/shared-hooks",
   "version": "0.0.1",
   "sideEffects": false
 }
