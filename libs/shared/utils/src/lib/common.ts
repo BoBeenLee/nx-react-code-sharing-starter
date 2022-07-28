@@ -41,10 +41,10 @@ export const uniqueId = (() => {
   };
 })();
 
-export const once = <R>(func: (...rest: unknown[]) => R) => {
+export const once = <P, R>(func: (...rest: P[]) => R) => {
   let isCalled = false,
     result: R | null = null;
-  return (...rest: unknown[]): R => {
+  return (...rest: P[]): R => {
     if (isCalled) {
       return result as R;
     }
