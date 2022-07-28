@@ -19,6 +19,16 @@ const nextConfig = {
   publicRuntimeConfig: {
     API_URL,
   },
+  webpack(config) {
+    return {
+      ...config,
+      optimization: {
+        ...config.optimization,
+        providedExports: true,
+        sideEffects: 'flag',
+      },
+    };
+  },
 };
 
 module.exports = withBundleAnalyzer(withNx(nextConfig));
