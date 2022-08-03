@@ -1,1 +1,1 @@
-export * from './todos';
+export * from './todo-item/todo-item';
