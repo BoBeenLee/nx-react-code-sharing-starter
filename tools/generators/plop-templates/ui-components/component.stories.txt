@@ -3,7 +3,7 @@ import { -- PLOP COMPONENT NAME HERE --, -- PLOP COMPONENT NAME HERE --Props } f
 
 export default {
   component: -- PLOP COMPONENT NAME HERE --,
-  title: '-- PLOP LAYER FOLDER HERE --/-- PLOP COMPONENT NAME HERE --',
+  title: '-- PLOP COMPONENT NAME HERE --',
   argTypes: {},
 } as Meta;
 
