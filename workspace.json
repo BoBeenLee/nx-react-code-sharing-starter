@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "features-todo": "libs/features/todo",
+    "images": "libs/images",
     "nextjs-app": "apps/nextjs-app",
     "nextjs-app-e2e": "apps/nextjs-app-e2e",
     "rn-app": "apps/rn-app",
