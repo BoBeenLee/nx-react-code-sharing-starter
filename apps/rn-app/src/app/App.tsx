@@ -10,8 +10,7 @@ import {
 } from 'react-native';
 
 // @ts-ignore
-
-import { Bold } from '@nx-react-code-sharing/shared-ui-components';
+import { Image, Bold } from '@nx-react-code-sharing/shared-ui-components';
 import {
   todosByOrderDESCSelector,
   useTodoStore,
@@ -39,6 +38,11 @@ export const App = () => {
               Welcome RnApp 👋 Todo List (API_URL={env.API_URL})
             </Bold.Bold8>
           </View>
+          <Image
+            style={styles.image}
+            alt="storybook"
+            source={require('../../assets/storybook.png')}
+          />
           <View style={styles.todos}>
             {todos.map((todo) => (
               <Bold.Bold12 key={todo.id}>{todo.name}</Bold.Bold12>
@@ -59,6 +63,10 @@ const styles = StyleSheet.create({
   section: {
     marginVertical: 24,
     marginHorizontal: 12,
+  },
+  image: {
+    width: 100,
+    height: 100,
   },
   todos: {
     flexDirection: 'column',
