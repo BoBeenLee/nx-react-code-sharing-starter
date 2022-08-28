@@ -14,6 +14,7 @@
     "@storybook/react": "*",
     "qs": "*",
     "immer": "*",
-    "zustand": "*"
+    "zustand": "*",
+    "@storybook/addon-viewport": "*"
   }
 }
