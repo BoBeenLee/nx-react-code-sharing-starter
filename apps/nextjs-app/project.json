@@ -12,7 +12,10 @@
         "outputPath": "dist/apps/nextjs-app"
       },
       "configurations": {
-        "production": {}
+        "production": {},
+        "development": {
+          "outputPath": "apps/nextjs-app"
+        }
       }
     },
     "serve": {

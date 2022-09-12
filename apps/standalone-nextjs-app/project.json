@@ -12,7 +12,10 @@
         "outputPath": "dist/apps/standalone-nextjs-app"
       },
       "configurations": {
-        "production": {}
+        "production": {},
+        "development": {
+          "outputPath": "apps/standalone-nextjs-app"
+        }
       }
     },
     "build-production": {

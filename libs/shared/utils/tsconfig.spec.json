@@ -6,5 +6,5 @@
     "types": ["jest", "node"]
   },
   "files": ["../../../types/global.d.ts"],
-  "include": ["**/*.test.ts", "**/*.spec.ts", "**/*.d.ts"]
+  "include": ["**/*.test.ts", "**/*.spec.ts", "**/*.d.ts", "jest.config.ts"]
 }
