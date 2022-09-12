@@ -69,7 +69,7 @@
     "@nrwl/react": "14.4.2",
     "@nrwl/react-native": "14.4.2",
     "@nrwl/storybook": "14.4.2",
-    "@nrwl/web": "14.4.2",
+    "@nrwl/web": "14.7.4",
     "@nrwl/workspace": "14.4.2",
     "@react-native-async-storage/async-storage": "1.17.6",
     "@react-native-community/cli": "8.0.3",
