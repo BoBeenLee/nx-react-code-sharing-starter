@@ -1,10 +1,8 @@
-import { render } from '@testing-library/react';
-
-import Images from './images';
+import { setImagePrefixPath, getImages } from './images';
 
 describe('Images', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<Images />);
-    expect(baseElement).toBeTruthy();
+  it('prefix 이미지 설정', () => {
+    setImagePrefixPath('/test');
+    expect(getImages().iconImages.storybook).toBe('/test/assets/storybook.png');
   });
 });
