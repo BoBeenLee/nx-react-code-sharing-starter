@@ -43,7 +43,7 @@
     "express": "^4.17.3",
     "hoist-non-react-statics": "^3.3.2",
     "immer": "^9.0.12",
-    "next": "12.2.5",
+    "next": "12.3.0",
     "qs": "^6.11.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
