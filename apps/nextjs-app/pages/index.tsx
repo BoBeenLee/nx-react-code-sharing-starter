@@ -1,4 +1,4 @@
-import { test } from '@nx-react-code-sharing/shared-apis';
+import { customAPI } from '@nx-react-code-sharing/shared-apis';
 import { Bold, Image } from '@nx-react-code-sharing/shared-ui-components';
 import {
   todosByOrderDESCSelector,
@@ -14,7 +14,7 @@ export function Index() {
 
   useEffect(() => {
     const fetchTest = async () => {
-      const testData = await test<{
+      const testData = await customAPI<{
         status: string;
       }>({
         url: '/api/healthz',
