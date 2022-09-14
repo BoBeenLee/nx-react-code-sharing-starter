@@ -1,4 +1,4 @@
-import { test } from '@nx-react-code-sharing/shared-apis';
+import { customAPI } from '@nx-react-code-sharing/shared-apis';
 import { Bold } from '@nx-react-code-sharing/shared-ui-components';
 import {
   todosByOrderDESCSelector,
@@ -6,15 +6,14 @@ import {
 } from '@nx-react-code-sharing/features-todo';
 import { useEffect } from 'react';
 import { env } from '../libs/env';
-import Layout from "../components/layout";
-
+import Layout from '../components/layout';
 
 export function Index() {
   const todos = useTodoStore(todosByOrderDESCSelector);
 
   useEffect(() => {
     const fetchTest = async () => {
-      const testData = await test<{
+      const testData = await customAPI<{
         status: string;
       }>({
         url: '/api/healthz',
