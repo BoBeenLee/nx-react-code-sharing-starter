@@ -86,7 +86,7 @@
     "@storybook/manager-webpack5": "6.5.9",
     "@storybook/react": "6.5.9",
     "@storybook/storybook-deployer": "^2.8.12",
-    "@svgr/webpack": "^5.4.0",
+    "@svgr/webpack": "^6.4.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/jest-native": "4.0.11",
     "@testing-library/react": "13.3.0",
