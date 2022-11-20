@@ -1,4 +1,5 @@
 {
+  "name": "shared-stores",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/stores/src",
   "projectType": "library",
@@ -18,7 +19,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/stores"],
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/stores"],
       "options": {
         "jestConfig": "libs/shared/stores/jest.config.ts",
         "passWithNoTests": true

@@ -1,4 +1,5 @@
 {
+  "name": "images",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/images/src",
   "projectType": "library",
@@ -13,7 +14,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/images"],
+      "outputs": ["{workspaceRoot}/coverage/libs/images"],
       "options": {
         "jestConfig": "libs/images/jest.config.ts",
         "passWithNoTests": true

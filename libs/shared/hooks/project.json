@@ -1,4 +1,5 @@
 {
+  "name": "shared-hooks",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/hooks/src",
   "projectType": "library",
@@ -18,7 +19,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/hooks"],
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/hooks"],
       "options": {
         "jestConfig": "libs/shared/hooks/jest.config.ts",
         "passWithNoTests": true

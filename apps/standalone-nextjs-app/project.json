@@ -1,4 +1,5 @@
 {
+  "name": "standalone-nextjs-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/standalone-nextjs-app",
   "projectType": "application",
@@ -19,7 +20,7 @@
       }
     },
     "build-production": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "commands": [
           "nx run standalone-nextjs-app:build:production",
@@ -45,7 +46,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "commands": [
           "nx run standalone-nextjs-app:build-production",
@@ -58,7 +59,7 @@
       }
     },
     "deploy": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "commands": [
           "nx run standalone-nextjs-app:build-production",
@@ -78,7 +79,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/standalone-nextjs-app"],
+      "outputs": ["{workspaceRoot}/coverage/apps/standalone-nextjs-app"],
       "options": {
         "jestConfig": "apps/standalone-nextjs-app/jest.config.ts",
         "passWithNoTests": true

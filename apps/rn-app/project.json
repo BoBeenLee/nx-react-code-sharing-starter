@@ -1,4 +1,5 @@
 {
+  "name": "rn-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/rn-app/src",
   "projectType": "application",
@@ -10,7 +11,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "command": "nx start rn-app"
       }
@@ -21,7 +22,7 @@
     },
     "bundle-ios": {
       "executor": "@nrwl/react-native:bundle",
-      "outputs": ["apps/rn-app/build"],
+      "outputs": ["{projectRoot}/build"],
       "options": {
         "entryFile": "src/main.tsx",
         "platform": "ios",
@@ -35,8 +36,8 @@
     "build-android": {
       "executor": "@nrwl/react-native:build-android",
       "outputs": [
-        "apps/rn-app/android/app/build/outputs/bundle",
-        "apps/rn-app/android/app/build/outputs/apk"
+        "{projectRoot}/android/app/build/outputs/bundle",
+        "{projectRoot}/android/app/build/outputs/apk"
       ],
       "options": {}
     },
@@ -70,7 +71,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/rn-app"],
+      "outputs": ["{workspaceRoot}/coverage/apps/rn-app"],
       "options": {
         "jestConfig": "apps/rn-app/jest.config.ts",
         "passWithNoTests": true

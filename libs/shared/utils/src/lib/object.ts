@@ -8,6 +8,6 @@ export function callValue<T>(supplier: () => T, defaultValue: T) {
   }
 }
 
-export function getKeys<T>(obj: T): (keyof T)[] {
+export function getKeys<T extends object>(obj: T): (keyof T)[] {
   return Object.keys(obj) as (keyof T)[];
 }

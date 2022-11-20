@@ -1,4 +1,5 @@
 {
+  "name": "nextjs-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/nextjs-app",
   "projectType": "application",
@@ -32,7 +33,7 @@
       }
     },
     "deploy": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "commands": [
           "nx run nextjs-app:build:production",
@@ -52,7 +53,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/nextjs-app"],
+      "outputs": ["{workspaceRoot}/coverage/apps/nextjs-app"],
       "options": {
         "jestConfig": "apps/nextjs-app/jest.config.ts",
         "passWithNoTests": true
@@ -71,7 +72,7 @@
       }
     },
     "release": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "commands": [
           {
