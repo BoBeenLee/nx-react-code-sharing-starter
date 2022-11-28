@@ -71,7 +71,7 @@
     "@nrwl/storybook": "15.2.1",
     "@nrwl/web": "15.2.1",
     "@nrwl/workspace": "15.2.1",
-    "@react-native-async-storage/async-storage": "1.17.7",
+    "@react-native-async-storage/async-storage": "1.17.11",
     "@react-native-community/cli": "9.0.0",
     "@react-native-community/cli-platform-android": "9.0.0",
     "@react-native-community/cli-platform-ios": "9.1.0",
