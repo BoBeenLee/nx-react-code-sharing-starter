@@ -64,7 +64,7 @@ export const isEmpty = <T>(obj: T | null | undefined | '' | []) => {
   if (obj === undefined || obj === null || obj === '') {
     return true;
   }
-  if ('length' in obj) {
+  if (Array.isArray(obj) && 'length' in obj) {
     return obj.length === 0;
   }
   return JSON.stringify(obj) === JSON.stringify({});
