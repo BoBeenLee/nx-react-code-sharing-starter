@@ -124,7 +124,7 @@
     "metro-babel-register": "0.73.3",
     "metro-react-native-babel-preset": "0.73.3",
     "metro-resolver": "0.73.3",
-    "nx": "15.4.2",
+    "nx": "16.1.2",
     "plop": "^3.1.1",
     "prettier": "2.7.1",
     "react-native-config": "1.4.11",
