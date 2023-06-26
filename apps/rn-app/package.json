@@ -15,6 +15,7 @@
     "qs": "*",
     "immer": "*",
     "zustand": "*",
-    "@storybook/addon-viewport": "*"
+    "@storybook/addon-viewport": "*",
+    "metro-config": "*"
   }
 }
